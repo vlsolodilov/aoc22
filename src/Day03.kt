@@ -22,7 +22,7 @@ fun main() {
 
 
     fun part2(input: List<String>): Int =
-        input.chunked(3).map { getGroupEqualItems(it) }.sumOf { getPriorityItem(it) }
+        input.chunked(3).map(::getGroupEqualItems).sumOf(::getPriorityItem)
 
 
     // test if implementation meets criteria from the description, like:
